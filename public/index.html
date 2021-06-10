@@ -23,10 +23,11 @@
         });
 
 
-        socket.emit('message', {nombre: 'Jean Cuervo'});
+        //socket.emit('message', {nombre: 'Jean Cuervo'});
 
-        socket.on('message', function(payload){
-            console.log('escuchando: ', payload);
+        socket.on('current-bands', function(bands){
+            console.clear();
+            console.table(bands);
         });
 
     </script>
